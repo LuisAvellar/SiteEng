@@ -1,0 +1,19 @@
+
+
+
+{% extends 'tests/indexsub.html' %}
+
+
+
+{% autoescape off %}
+
+{% block content %}
+
+<p>principal {{ name }}</p>
+{{ name }}
+{% include "./viewsub.html" %}
+
+{% endblock content %}
+
+
+{% endautoescape %}

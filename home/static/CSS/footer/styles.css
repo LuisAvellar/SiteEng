@@ -1,0 +1,27 @@
+.FooterBase {
+    min-height: var(--footerMinHeight);
+    background: var(--black);
+    border-top: 2px solid var(--primary);
+    padding-left:   var(--footerpaddingleft);
+    padding-right: var(--footerpaddingright);
+    padding-top:  var(--footerpaddingtop);
+    padding-bottom:   var(--footerpaddingbottom);
+    color: var(--white);
+    text-align: center;
+    margin: 0px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 800px) {
+      margin: 0px;
+      
+    }
+  }
+
+.FotterBaseA{
+  text-align: center;
+  margin: 0px;
+  padding: var(--footercontentpadding);
+  color: var(--background);
+  text-decoration: none;
+}

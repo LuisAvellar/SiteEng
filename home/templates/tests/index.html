@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>SiteEng</title>
+
+</head>
+<body>
+
+            <a href="/">
+                <img class="Logo" src="https://static.dribbble.com/users/39141/screenshots/3839764/infinity.png" />
+            </a>    
+
+        <p>index {{ name }}</p>
+        
+         {% include './indexinclude.html' with name=name %}
+         {% block contentsub %}
+         {% endblock contentsub %}
+
+         
+</body>
+</html>

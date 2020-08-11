@@ -1,0 +1,106 @@
+.Menu {
+    width: 100%;
+    height: var(--menuMinHeight);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: var(--black);
+    border-bottom: 2px solid var(--blue);
+}
+
+@media (max-width: 800px) {
+    .Menu {
+        height: 40px;
+        justify-content: center;
+    }
+}
+
+.Logo {
+    max-width: 168px;
+    color: var(--blue);
+    font-size: 50px;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 3px solid var(--blue);
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+@media (max-width: 800px) {
+
+    .Logo {
+        max-width: 105px;
+        color: var(--blue);
+        font-size: 50px;
+        text-decoration: none;
+    }
+}
+.ButtonLinkList {
+    justify-content: space-between;
+}
+
+
+.ButtonLink {
+    color: var(--background);
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 16px 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+
+    display: inline-block;
+    transition: color .5s;
+    display: inline-block;
+
+}
+
+.ButtonLink:hover,
+.ButtonLink:focus {
+    color: var(--blue);
+
+}
+
+.ButtonLink > a {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.ButtonLink:hover > a {
+    
+    color: var(--blue);
+}
+
+@media (max-width: 800px) {
+    
+    a.ButtonLink {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--background);
+        border-radius: 0;
+        border: 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+

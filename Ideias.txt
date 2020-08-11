@@ -1,0 +1,7 @@
+- Fazer um site com domínio www.status102.com ou www.state418.com www.engpage.com (ep ou e|>) algo que funcione bem em ingles e portugues.
+
+- Font Roboto e monoton
+
+- PEgar icones em https://www.flaticon.com/free-icons/
+
+-Usar coolors.co para paleta de cores. Usar inkscape ou Krita para ilustração. Talvez GIMP.
