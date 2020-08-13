@@ -1,6 +1,77 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+  }
+    
+  :root {
+  
+    --black: #000000;
+    --background: #e6e8e6;
+    --blue: #0c93d1;
+    --red: #df2935;
+    --green: #357266;
+
+    --menuHeight: 60px;
+    --borderMenu: 2px;
+
+    --footerHeight: 200px;
+    --footerpaddingleft: 16px;
+    --footerpaddingright: 16px;
+    --footerpaddingbottom: 32px;
+    --footerpaddingtop: 20px;
+    --footercontentpadding: 10px;
+  }
+    
+  html,
+  body {
+    background: var(--background);
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    --bodyPaddingTop: 0px;
+    padding-top: var(--menuHeight);
+    
+  }
+  
+  .md-light {
+    color: rgba(255, 255, 255, 1); 
+  }
+  .md-dark { 
+    color: rgba(0, 0, 0, 0.54); 
+  }
+  .md-18 { 
+    font-size: 18px; 
+  }
+  .md-24 { 
+    font-size: 24px; 
+  }
+  .md-36 { 
+    font-size: 36px; 
+  }
+  .md-48 {
+     font-size: 48px; 
+    }
+  
+  .content {
+    min-height: calc( 100vh - var(--menuHeight) - var(--footerHeight) );
+  } 
+  
+  
+  
+
+  
+
+
+  :root{
+    --leftMenuIconsSize: 52px;
+    --leftMenuTextSize: 75px;
+}
+
 .Menu {
     width: 100%;
-    height: var(--menuMinHeight);
+    height: var(--menuHeight);
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -8,98 +79,140 @@
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 23px;
+    padding-right: 0%;
     background: var(--black);
-    border-bottom: 2px solid var(--blue);
-}
-
-@media (max-width: 800px) {
-    .Menu {
-        height: 40px;
-        justify-content: center;
-    }
+    border-bottom: var(--borderMenu) solid var(--blue);
 }
 
 .Logo {
-    max-width: 168px;
-    color: var(--blue);
-    font-size: 50px;
+    --LogoMargin: 7vh;
+    --logoHeight: calc( var(--menuHeight) - var(--LogoMargin) );
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
     text-decoration: none;
+    box-sizing: content-box;
+    line-height: var(--logoHeight);
+    padding: 18px 10px 20px 10px;
     border-radius: 15px;
-    border: 3px solid var(--blue);
-    box-sizing: border-box;
+    color: var(--black);
+    background: var(--blue);
     cursor: pointer;
-    padding: 5px 8px;
 }
-
-@media (max-width: 800px) {
-
-    .Logo {
-        max-width: 105px;
-        color: var(--blue);
-        font-size: 50px;
-        text-decoration: none;
-    }
-}
-.ButtonLinkList {
-    justify-content: space-between;
-}
-
 
 .ButtonLink {
-    color: var(--background);
+
     box-sizing: border-box;
     cursor: pointer;
-    padding: 16px 24px;
-    font-style: normal;
+    padding: 0px 24px;
     font-weight: bold;
     font-size: 16px;
     outline: none;
     border-radius: 5px;
-
+    line-height: var(--logoHeight);
     display: inline-block;
-    transition: color .5s;
     display: inline-block;
-
-}
-
-.ButtonLink:hover,
-.ButtonLink:focus {
-    color: var(--blue);
-
-}
-
-.ButtonLink > a {
-    text-decoration: none;
     color: var(--background);
+    
 }
 
+.ButtonLink:focus,
 .ButtonLink:hover > a {
     
     color: var(--blue);
 }
 
-@media (max-width: 800px) {
-    
-    a.ButtonLink {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--background);
-        border-radius: 0;
-        border: 0;
-        text-align: center;
-    }
+
+.ButtonLink > a {
+    text-decoration: none;
+    color: var(--background);
+    transition: color 1s;
+   
 }
 
 
 
 
 
+.SideMenu {
 
+
+}
+
+
+.SideMenuIcons, .SideMenuText {
+    height: 100vh;
+    display: block;
+    align-items: center;
+    position: fixed;
+    top: var(--menuHeight);
+    margin: 0px 0px 0px 0px;
+    padding-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    background: var(--black);
+    border-right: none;
+}
+
+
+.SideMenuIcons {
+    width: var(--leftMenuIconsSize); 
+    left: 0;
+    padding-right: 0%;
+}
+
+.SideMenuText {
+    width: var(--leftMenuTextSize);
+    padding-top: 13px;
+    padding-right: 5%;
+
+}
+
+.SideMenu li,.SideMenu a {
+    color: var(--background);
+    text-decoration: none;
+    height: 50px;
+    list-style: none;
+}
+
+
+
+.LeftButton-menu {
+    padding: 0px 0px 0px 0px;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    width: var(--leftMenuTextSize);
+
+}
+
+.SideMenuSub1 {
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    z-index: 90;
+    padding: 5px 0px 0px 0px;
+
+}
+
+.SideMenuSub2 {
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    z-index: 80;
+
+    left: var(--leftMenuIconsSize);
+
+    z-index: 120;
+
+
+}
+
+.leftMenuOut {
+    transition: transform 0.5s;
+    transform: translateX( -300px );
+}
 
 
 

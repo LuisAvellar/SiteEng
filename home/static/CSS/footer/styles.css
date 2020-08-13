@@ -1,7 +1,7 @@
 .FooterBase {
-    min-height: var(--footerMinHeight);
+    height: var(--footerHeight);
     background: var(--black);
-    border-top: 2px solid var(--primary);
+    border-top: none;
     padding-left:   var(--footerpaddingleft);
     padding-right: var(--footerpaddingright);
     padding-top:  var(--footerpaddingtop);
@@ -12,9 +12,13 @@
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    @media (max-width: 800px) {
+    z-index: 100;
+    
+  }
+
+  @media (max-width: 800px) {
+    .FooterBase {
       margin: 0px;
-      
     }
   }
 

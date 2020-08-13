@@ -1,0 +1,247 @@
+
+.md-light {
+  color: rgba(255, 255, 255, 1); 
+}
+.md-dark { 
+  color: rgba(0, 0, 0, 0.54); 
+}
+
+.md-18 { 
+  font-size: 18px; 
+}
+.md-24 { 
+  font-size: 24px; 
+}
+.md-36 { 
+  font-size: 36px; 
+}
+.md-48 {
+   font-size: 48px; 
+  }
+
+.content {
+  min-height: calc( 92.3vh - var(--bodyPaddingTop) - var(--footerpaddingbottom) - var(--footerpaddingtop) - var(--footerMinHeight) );
+} 
+
+
+/* http://google.github.io/material-design-icons/ 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+
+
+
+
+
+
+
+:root{
+  --leftMenuIconsSize: 53px;
+  --leftMenuTextSize: 75px;
+  --borderMenu: 2px;
+}
+
+.Menu {
+  width: 100%;
+  height: var(--menuHeight);
+  z-index: 100;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 2%;
+  padding-right: 0%;
+  background: var(--black);
+  border-bottom: var(--borderMenu) solid var(--blue);
+}
+
+.Menu-left {
+  display: inline-flex;
+}
+
+@media (max-width: 800px) {
+  .Menu {
+      height: 40px;
+      justify-content: center;
+  }
+}
+
+.Button-menu {
+
+  align-items: center;
+  max-width: 168px;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 8px;
+  margin-right: 100px;
+}
+
+
+.Logo {
+  max-width: 168px;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 15px;
+  color: var(--black);
+  background: var(--blue);
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  padding: 8px 8px;
+}
+
+@media (max-width: 800px) {
+
+  .Logo {
+      max-width: 105px;
+      color: var(--blue);
+      font-size: 50px;
+      text-decoration: none;
+  }
+}
+.ButtonLinkList {
+  justify-content: space-between;
+}
+
+
+.ButtonLink {
+  color: var(--background);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+
+  display: inline-block;
+  transition: color .5s;
+  display: inline-block;
+
+}
+
+.ButtonLink:hover,
+.ButtonLink:focus {
+  color: var(--blue);
+
+}
+
+.ButtonLink > a {
+  text-decoration: none;
+  color: var(--background);
+}
+
+.ButtonLink:hover > a {
+  
+  color: var(--blue);
+}
+
+@media (max-width: 800px) {
+  
+  a.ButtonLink {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--background);
+      border-radius: 0;
+      border: 0;
+      text-align: center;
+  }
+}
+
+
+.SideMenu {
+  display: block;
+  margin: 0px 0px 0px 0px;
+  position: fixed;
+  z-index: 90;
+
+}
+
+
+
+.SideMenuIcons, .SideMenuText {
+  height: 100vh;
+  /* align-items: center; */
+  margin: 0px 0px 0px 0px;
+  padding-left: 0px;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  background: var(--black);
+  border-right: none;
+  top: var(--menuHeight);
+  /* var(--borderMenu) solid var(--blue); */
+}
+
+
+.SideMenuIcons {
+  width: var(--leftMenuIconsSize); 
+  left: 0;
+  padding-right: 0%;
+}
+
+.SideMenuText {
+  width: var(--leftMenuTextSize);
+  padding-top: 13px;
+  padding-right: 5%;
+
+}
+
+.SideMenu li,a {
+  height: 50px;
+  color: var(--background);
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+.LeftButton-menu {
+  padding: 0px 0px 0px 0px;
+  line-height: 30px;
+  text-align: center;
+
+}
+
+.SideMenuSub1 {
+  padding: 0px 0px 0px 0px;
+  position: fixed;
+  display: block;
+
+}
+
+.SideMenuSub2 {
+  display: block;
+  left: var(--leftMenuIconsSize);
+  position: fixed;
+  /* padding-left: 10px; */
+  /* transform: translateX(-100%); */
+}
+
+
+
+
+
