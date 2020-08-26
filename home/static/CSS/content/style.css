@@ -1,0 +1,47 @@
+.content {
+    margin-top: var(--menuHeight);
+    margin-left: var(--leftMenuIconsSize);
+    min-height: calc( 100vh - var(--menuHeight) );
+    padding: var(--contentPaddingVertical) var(--contentPaddingHorizontal)
+}
+
+.confMain{
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.choosing > div{
+    display: block;
+}
+
+.confMain div{
+    margin-right: 40px;
+}
+
+.fluid {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.fluid div{
+    margin-right: 40px;
+}
+
+.fluidProps { 
+    display: flex; 
+    flex-wrap: wrap;
+    width: 1000px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.fluidProps input{
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.fluidProps > div{
+    margin: 15px 40px;
+}

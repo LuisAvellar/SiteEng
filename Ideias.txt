@@ -15,3 +15,25 @@ Ideias
 - Pegar icones em https://www.flaticon.com/free-icons/
 
 -Usar coolors.co para paleta de cores. Usar inkscape ou Krita para ilustração. Talvez GIMP.
+
+
+- Usar o processo abaixo para gerar arquivo de imagem a partir de um HTML:
+
+"
+
+I know this is quite an old question which already has a lot of answers, yet I still spent hours trying to actually do what I wanted:
+
+given an html file, generate a (png) image with transparent background from the command line
+Using Chrome headless (version 74.0.3729.157 as of this response), it is actually easy:
+
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot --window-size=256,256 --default-background-color=0 button.html
+Explanation of the command:
+
+you run Chrome from the command line (here shown for the Mac, but assuming similar on Windows or Linux)
+--headless runs Chrome without opening it and exits after the command completes
+--screenshot will capture a screenshot (note that it generates a file called screenshot.png in the folder where the command is run)
+--window-size allow to only capture a portion of the screen (format is --window-size=width,height)
+--default-background-color=0 is the magic trick that tells Chrome to use a transparent background, not the default white color
+finally you provide the html file (as a url either local or remote...)
+
+"

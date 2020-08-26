@@ -1,0 +1,226 @@
+{% extends 'home/index.html' %}
+
+
+{% block content %}
+<h1>Pressure Drop</h1>
+
+<form>
+
+    <div class="confMain"> 
+        <div>
+            <label for="metodo">
+                Metodo:
+            </Label>
+            
+            <select name="metodo" id="metodo">
+                <option value="Colebrook-White">Colebrook-White</option>
+                <option value="Genereaux">Genereaux</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="fluid"> 
+        <div class="choosing">
+            <div>
+                <input type="radio" id="ChooseList" name="ChooseFluid" value="ChooseList" checked> 
+                <label for="ChooseList">Choose from list</label>
+            </div>
+            <div>
+                <input type="radio" id="Customized" name="ChooseFluid" value="Customized">
+                <label for="Customized">Customized</label>
+            </div>
+        </div>
+
+        <div>
+                <label for="fluid">
+                    Fluid:
+                </Label>
+                
+                <select name="fluid" id="fluid" class="isdisabled">
+                    <option value="water">Water</option>
+                    <option value="Glycerin">Glycerin</option>
+                    <option value="Oil">Oil</option>
+                    <option value="Ethanol">Ethanol</option>
+                </select>
+        </div>
+    </div>
+
+    
+    <div class="fluidProps">
+
+        {% for a in a %}
+
+            {{ a.1 }} 
+
+            <div>
+
+                    <label for="test{{ a.0 }}" class="isdisabled">
+                        Valor1:
+                    </Label>
+                    <input type="number" list="test{{ a.0 }}List" id="test{{a.0 }}" name="test{{ a.0 }}" min= "1.0" max= "10.0" required autofocus />
+            
+                    <span>ml</span>        
+
+                    <datalist id="test{{ a.0 }}List">
+                        <option value="5.0">
+                        <option value="7.0">
+                        <option value="8.0">
+                    </datalist>
+
+            </div>  
+
+        {% endfor %}
+        
+    </div>
+
+
+    <input type="text" id="myText" value="Some text...">
+        
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+
+    </script>
+
+
+    <p>
+        <Button type="submit">
+            Calcular
+        </Button>
+    </p>
+
+</form>
+
+
+{% endblock content %}
+
+<!-- 
+
+///////
+ddd.toggleAttribute("readonly");
+element.removeAttribute(attrName); 
+
+Neste exemplo é retornado o primeiro elemento style que, ou não tem nenhum atributo type, ou tem o atributo type igual a  text/css:
+var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+
+var result = element.hasAttribute(name);
+result
+holds the return value true or false.
+name
+is a string representing the name of the attribute.
+
+Esse exemplo retorna todos os elementos que possuem a classe test, e que também são filhos do elemento que possui o id com valor main:
+document.getElementById('main').getElementsByClassName('test');
+
+Para retornar elementos que incluem as classes red and test:
+element.getElementsByClassName('red test');
+
+You can use either the item() method on the returned HTMLCollection or standard array syntax to examine individual elements.
+"matches" will change as soon as any "colorbox" class is removed, so you can do.
+var matches = element.getElementsByClassName('colorbox');
+while (matches.length > 0) {
+  matches.item(0).classList.add('hueframe');
+  matches[0].classList.remove('colorbox');
+}
+
+const selectElement = document.querySelector('.ice-cream');
+selectElement.addEventListener('change', (event) => {
+  const result = document.querySelector('.result');
+  result.textContent = `You like ${event.target.value}`;
+});
+
+ ////////   
+function substituir(el) {
+    el.value = el.value.replace(",", ".");
+}
+
+<input type="text" onkeyup="substituir(this);" /> 
+
+
+
+
+////////
+// div é uma referência de objeto para um elemento <div> com class = "foo bar"
+div.classList.remove("foo");
+div.classList.add("anotherclass");
+
+// Se estiver visível, remova-o, caso contrário, adicione-o
+div.classList.toggle("visible");
+
+// adicionar/remover, dependendo do teste condicional, i menos de 10
+div.classList.toggle("visible", i < 10 );
+
+alert(document.getElementById("aa").classList.contains("foo"));
+alert(document.getElementById("aa").classList.contains("fluid"));
+
+// adicionar ou remover várias classes
+div.classList.add("foo","bar");
+div.classList.remove("foo", "bar");
+
+
+
+
+////////
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  document.body.appendChild(x);
+}
+
+<button onclick="myFunction()">Try it</button>
+
+      
+////////
+readonly
+type="radio"
+placeholder="1"
+value="10"
+min= "1.0"
+max= "10.0"
+required
+autofocus
+
+<form>
+    <p>
+        <Label
+          For={fieldId}
+        >
+          <Input
+            id={fieldId}
+            type={type}
+            value={value}
+            name={name}
+            hasValue={hasValue}
+            onChange={onChange}
+            autoComplete={hasSuggestions ? 'off' : 'on'}
+            list={hasSuggestions ? `suggestionFor_${fieldId}` : undefined}
+          />
+          <Label.Text>
+            {label}
+            :
+          </Label.Text>
+          {
+            hasSuggestions && (
+              <datalist id={`suggestionFor_${fieldId}`}>
+                {
+                suggestions.map((suggestion) => (
+                  <option value={suggestion} key={`suggestionFor_${fieldId}_option${suggestion}`}>
+                    {suggestion}
+                  </option>
+                ))
+              }
+              </datalist>
+            )
+          }
+  
+        </Label>
+    </p>
+
+</form> -->

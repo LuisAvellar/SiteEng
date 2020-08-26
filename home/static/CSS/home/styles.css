@@ -12,7 +12,7 @@
   --red: #df2935;
   --green: #357266;
 
-  --menuHeight: 100px;
+  --menuHeight: 60px;
   --borderMenu: 2px;
 
   --footerHeight: 200px;
@@ -21,19 +21,25 @@
   --footerpaddingbottom: 32px;
   --footerpaddingtop: 20px;
   --footercontentpadding: 10px;
+
+  --leftMenuIconsSize: 150px;
+  --leftMenuTextSize: 75px;
+
+  --contentPaddingHorizontal: 75px;
+  --contentPaddingVertical: 50px;
 }
   
 html,
 body {
   background: var(--background);
-  margin: 0;
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0;
-  --bodyPaddingTop: 0px;
-  padding-top: var(--menuHeight);
+  margin: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
   
 }
+
 
 .md-light {
   color: rgba(255, 255, 255, 1); 
@@ -54,7 +60,5 @@ body {
    font-size: 48px; 
   }
 
-.content {
-  min-height: calc( 100vh - var(--menuHeight) - var(--footerHeight) );
-} 
+
 
