@@ -15,15 +15,14 @@
 }
 
 .Logo {
-    --LogoMargin: 7vh;
-    --logoHeight: calc( var(--menuHeight) - var(--LogoMargin) );
+    --logoHeight: 30px;
     font-size: 28px;
     font-weight: 900;
     text-align: center;
     text-decoration: none;
     box-sizing: content-box;
     line-height: var(--logoHeight);
-    padding: 18px 10px 20px 10px;
+    padding: 8px 10px 8px 10px;
     border-radius: 15px;
     color: var(--black);
     background: var(--blue);
@@ -96,7 +95,7 @@
     top: var(--menuHeight);
     margin: 0px 0px 0px 0px;
     padding-left: 25px;
-    padding-top: 3px;
+    padding-top: var( --contentPaddingVertical );
     padding-bottom: 0px;
     background: var(--black);
     border-right: none;
@@ -106,14 +105,13 @@
 .SideMenuIcons ul {
     width: var(--leftMenuIconsSize); 
     left: 0;
-    padding-right: 0%;
+    padding-right: 0px;
 }
 
 .SideMenuText ul {
     width: var(--leftMenuTextSize);
     padding-top: 13px;
     padding-right: 5%;
-
 }
 
 .SideMenuIcons li, .SideMenuIcons a, .SideMenuText li, .SideMenuText a {
@@ -123,7 +121,11 @@
     height: 50px;
     list-style: none;
     display: flex;
-
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: left;
+    white-space:nowrap;
+    
 }
 
 
@@ -137,7 +139,6 @@
     text-align: center;
     box-sizing: border-box;
     width: var(--leftMenuTextSize);
-
 }
 
 

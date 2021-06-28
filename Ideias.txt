@@ -37,3 +37,9 @@ you run Chrome from the command line (here shown for the Mac, but assuming simil
 finally you provide the html file (as a url either local or remote...)
 
 "
+
+
+- Usar icone de balança mecanica para a conversão de unidades. Icone de graça no link:
+https://www.dreamstime.com/scale-comparison-icon-flat-style-balance-weight-vector-illus-scale-comparison-icon-flat-style-balance-weight-vector-image131287729
+
+- Buscar referências de design nos sites Behance, Dribble, e Muzli (dica do Claudio Pelizari que participou da imersão alura).

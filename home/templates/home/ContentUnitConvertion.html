@@ -1,101 +1,1891 @@
 {% extends 'home/index.html' %}
 
-
 {% block content %}
-<h1>Pressure Drop</h1>
+  <h1>Units Convertion</h1>
 
-<form>
+  <div>
 
-    <div class="confMain"> 
-        <div>
-            <label for="metodo">
-                Metodo:
-            </Label>
-            
-            <select name="metodo" id="metodo">
-                <option value="Colebrook-White">Colebrook-White</option>
-                <option value="Genereaux">Genereaux</option>
-            </select>
-        </div>
-    </div>
     
-    <div class="fluid"> 
-        <div class="choosing">
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Mass</h2>
+      
+      <div class="ConvBlock" id="MassConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="MassInputLeftElem" name="MassInputLeftElem" min= "0" autofocus />
+            <label for="MassInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
             <div>
-                <input type="radio" id="ChooseList" name="ChooseFluid" value="ChooseList" checked> 
-                <label for="ChooseList">Choose from list</label>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1" checked> 
+              <label for="Mass-left-lb1">  lb1 </label>
             </div>
             <div>
-                <input type="radio" id="Customized" name="ChooseFluid" value="Customized">
-                <label for="Customized">Customized</label>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
             </div>
-        </div>
-
-        <div>
-                <label for="fluid">
-                    Fluid:
-                </Label>
-                
-                <select name="fluid" id="fluid" class="isdisabled">
-                    <option value="water">Water</option>
-                    <option value="Glycerin">Glycerin</option>
-                    <option value="Oil">Oil</option>
-                    <option value="Ethanol">Ethanol</option>
-                </select>
-        </div>
-    </div>
-
-    
-    <div class="fluidProps">
-
-        {% for a in a %}
-
-            {{ a.1 }} 
-
             <div>
-
-                    <label for="test{{ a.0 }}" class="isdisabled">
-                        Valor1:
-                    </Label>
-                    <input type="number" list="test{{ a.0 }}List" id="test{{a.0 }}" name="test{{ a.0 }}" min= "1.0" max= "10.0" required autofocus />
-            
-                    <span>ml</span>        
-
-                    <datalist id="test{{ a.0 }}List">
-                        <option value="5.0">
-                        <option value="7.0">
-                        <option value="8.0">
-                    </datalist>
-
-            </div>  
-
-        {% endfor %}
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-left-lb1" name="ChooseMassUnitList-left" value="lb1"> 
+              <label for="Mass-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
         
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="MassInputrightElem" name="MassInputrightElem" min= "0"/>
+            <label for="MassInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1" checked> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Mass-right-lb1" name="ChooseMassUnitList-right" value="lb1"> 
+              <label for="Mass-right-lb1">  lb1 </label>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Pressure</h2>
+      
+      <div class="ConvBlock" id="PressConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="PressInputLeftElem" name="PressInputLeftElem" min= "0" autofocus />
+            <label for="PressInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1" checked> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-left-lb1" name="ChoosePressUnitList-left" value="lb1"> 
+              <label for="Press-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="PressInputrightElem" name="PressInputrightElem" min= "0"/>
+            <label for="PressInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1" checked> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Press-right-lb1" name="ChoosePressUnitList-right" value="lb1"> 
+              <label for="Press-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+    
+    
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Length</h2>
+      
+      <div class="ConvBlock" id="LengthConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="LengthInputLeftElem" name="LengthInputLeftElem" min= "0" autofocus />
+            <label for="LengthInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1" checked> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-left-lb1" name="ChooseLengthUnitList-left" value="lb1"> 
+              <label for="Length-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="LengthInputrightElem" name="LengthInputrightElem" min= "0"/>
+            <label for="LengthInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1" checked> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Length-right-lb1" name="ChooseLengthUnitList-right" value="lb1"> 
+              <label for="Length-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+    
+    
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Angle</h2>
+      
+      <div class="ConvBlock" id="AngleConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AngleInputLeftElem" name="AngleInputLeftElem" min= "0" autofocus />
+            <label for="AngleInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1" checked> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-left-lb1" name="ChooseAngleUnitList-left" value="lb1"> 
+              <label for="Angle-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AngleInputrightElem" name="AngleInputrightElem" min= "0"/>
+            <label for="AngleInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1" checked> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Angle-right-lb1" name="ChooseAngleUnitList-right" value="lb1"> 
+              <label for="Angle-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
     </div>
 
 
-    <input type="text" id="myText" value="Some text...">
+
+
+
+
+
+
+
+
+
         
-    <button onclick="myFunction()">Try it</button>
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Force</h2>
+      
+      <div class="ConvBlock" id="SpeedConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="SpeedInputLeftElem" name="SpeedInputLeftElem" min= "0" autofocus />
+            <label for="SpeedInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1" checked> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-left-lb1" name="ChooseSpeedUnitList-left" value="lb1"> 
+              <label for="Speed-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="SpeedInputrightElem" name="SpeedInputrightElem" min= "0"/>
+            <label for="SpeedInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1" checked> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Speed-right-lb1" name="ChooseSpeedUnitList-right" value="lb1"> 
+              <label for="Speed-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Area</h2>
+      
+      <div class="ConvBlock" id="AreaConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AreaInputLeftElem" name="AreaInputLeftElem" min= "0" autofocus />
+            <label for="AreaInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1" checked> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-left-lb1" name="ChooseAreaUnitList-left" value="lb1"> 
+              <label for="Area-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AreaInputrightElem" name="AreaInputrightElem" min= "0"/>
+            <label for="AreaInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1" checked> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Area-right-lb1" name="ChooseAreaUnitList-right" value="lb1"> 
+              <label for="Area-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Dynamic Viscosity</h2>
+      
+      <div class="ConvBlock" id="DynVisConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="DynVisInputLeftElem" name="DynVisInputLeftElem" min= "0" autofocus />
+            <label for="DynVisInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1" checked> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-left-lb1" name="ChooseDynVisUnitList-left" value="lb1"> 
+              <label for="DynVis-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="DynVisInputrightElem" name="DynVisInputrightElem" min= "0"/>
+            <label for="DynVisInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1" checked> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="DynVis-right-lb1" name="ChooseDynVisUnitList-right" value="lb1"> 
+              <label for="DynVis-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Absolute Viscosity</h2>
+      
+      <div class="ConvBlock" id="AbsVisConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AbsVisInputLeftElem" name="AbsVisInputLeftElem" min= "0" autofocus />
+            <label for="AbsVisInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1" checked> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-left-lb1" name="ChooseAbsVisUnitList-left" value="lb1"> 
+              <label for="AbsVis-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="AbsVisInputrightElem" name="AbsVisInputrightElem" min= "0"/>
+            <label for="AbsVisInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1" checked> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="AbsVis-right-lb1" name="ChooseAbsVisUnitList-right" value="lb1"> 
+              <label for="AbsVis-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Volumetric Flow Rate</h2>
+      
+      <div class="ConvBlock" id="VolFlowConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="VolFlowInputLeftElem" name="VolFlowInputLeftElem" min= "0" autofocus />
+            <label for="VolFlowInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1" checked> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-left-lb1" name="ChooseVolFlowUnitList-left" value="lb1"> 
+              <label for="VolFlow-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="VolFlowInputrightElem" name="VolFlowInputrightElem" min= "0"/>
+            <label for="VolFlowInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1" checked> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="VolFlow-right-lb1" name="ChooseVolFlowUnitList-right" value="lb1"> 
+              <label for="VolFlow-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Time</h2>
+      
+      <div class="ConvBlock" id="TimeConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="TimeInputLeftElem" name="TimeInputLeftElem" min= "0" autofocus />
+            <label for="TimeInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1" checked> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-left-lb1" name="ChooseTimeUnitList-left" value="lb1"> 
+              <label for="Time-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="TimeInputrightElem" name="TimeInputrightElem" min= "0"/>
+            <label for="TimeInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1" checked> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Time-right-lb1" name="ChooseTimeUnitList-right" value="lb1"> 
+              <label for="Time-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
     
-    <p id="demo"></p>
+
+
+
+
     
-    <script>
-    function myFunction() {
-      var x = document.getElementById("myText").value;
-      document.getElementById("demo").innerHTML = x;
-    }
-
-    </script>
 
 
-    <p>
-        <Button type="submit">
-            Calcular
-        </Button>
-    </p>
 
-</form>
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Volume</h2>
+      
+      <div class="ConvBlock" id="VolConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="VolInputLeftElem" name="VolInputLeftElem" min= "0" autofocus />
+            <label for="VolInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1" checked> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-left-lb1" name="ChooseVolUnitList-left" value="lb1"> 
+              <label for="Vol-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="VolInputrightElem" name="VolInputrightElem" min= "0"/>
+            <label for="VolInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1" checked> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Vol-right-lb1" name="ChooseVolUnitList-right" value="lb1"> 
+              <label for="Vol-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+    
+
+
+
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Density</h2>
+      
+      <div class="ConvBlock" id="DensConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="DensInputLeftElem" name="DensInputLeftElem" min= "0" autofocus />
+            <label for="DensInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1" checked> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-left-lb1" name="ChooseDensUnitList-left" value="lb1"> 
+              <label for="Dens-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="DensInputrightElem" name="DensInputrightElem" min= "0"/>
+            <label for="DensInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1" checked> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Dens-right-lb1" name="ChooseDensUnitList-right" value="lb1"> 
+              <label for="Dens-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Energy</h2>
+      
+      <div class="ConvBlock" id="EnergyConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="EnergyInputLeftElem" name="EnergyInputLeftElem" min= "0" autofocus />
+            <label for="EnergyInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1" checked> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-left-lb1" name="ChooseEnergyUnitList-left" value="lb1"> 
+              <label for="Energy-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="EnergyInputrightElem" name="EnergyInputrightElem" min= "0"/>
+            <label for="EnergyInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1" checked> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Energy-right-lb1" name="ChooseEnergyUnitList-right" value="lb1"> 
+              <label for="Energy-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+    
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Specific Energy</h2>
+      
+      <div class="ConvBlock" id="SEnergyConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="SEnergyInputLeftElem" name="SEnergyInputLeftElem" min= "0" autofocus />
+            <label for="SEnergyInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1" checked> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-left-lb1" name="ChooseSEnergyUnitList-left" value="lb1"> 
+              <label for="SEnergy-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="SEnergyInputrightElem" name="SEnergyInputrightElem" min= "0"/>
+            <label for="SEnergyInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1" checked> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="SEnergy-right-lb1" name="ChooseSEnergyUnitList-right" value="lb1"> 
+              <label for="SEnergy-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+    
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Power</h2>
+      
+      <div class="ConvBlock" id="PowerConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="PowerInputLeftElem" name="PowerInputLeftElem" min= "0" autofocus />
+            <label for="PowerInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1" checked> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-left-lb1" name="ChoosePowerUnitList-left" value="lb1"> 
+              <label for="Power-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="PowerInputrightElem" name="PowerInputrightElem" min= "0"/>
+            <label for="PowerInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1" checked> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Power-right-lb1" name="ChoosePowerUnitList-right" value="lb1"> 
+              <label for="Power-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+    
+
+
+    
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Mass Flow</h2>
+      
+      <div class="ConvBlock" id="MassFlowConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="MassFlowInputLeftElem" name="MassFlowInputLeftElem" min= "0" autofocus />
+            <label for="MassFlowInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1" checked> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1</label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-left-lb1" name="ChooseMassFlowUnitList-left" value="lb1"> 
+              <label for="MassFlow-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="MassFlowInputrightElem" name="MassFlowInputrightElem" min= "0"/>
+            <label for="MassFlowInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1" checked> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1</label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="MassFlow-right-lb1" name="ChooseMassFlowUnitList-right" value="lb1"> 
+              <label for="MassFlow-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+    
+        
+    <div class="ConvBlockAll">
+      
+      <h2 class="TitleUnits">Temperature</h2>
+      
+      <div class="ConvBlock" id="TempConvBlock"> 
+        
+        <div class="ConvBlockleft">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="TempInputLeftElem" name="TempInputLeftElem" min= "0" autofocus />
+            <label for="TempInputLeftElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1" checked> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1</label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-left-lb1" name="ChooseTempUnitList-left" value="lb1"> 
+              <label for="Temp-left-lb1">  lb1 </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="ConvBlockright">
+          
+          <div class="ConvertionInput">
+            <input type="number" class="ConvertionInputElem" id="TempInputrightElem" name="TempInputrightElem" min= "0"/>
+            <label for="TempInputrightElem" class="ConvertionInputLabel"> kg </Label> 
+          </div>  
+            
+          <div class="choosing">
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1" checked> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1</label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+            <div>
+              <input type="radio" id="Temp-right-lb1" name="ChooseTempUnitList-right" value="lb1"> 
+              <label for="Temp-right-lb1">  lb1 </label>
+            </div>
+          </div>
+            
+        </div>
+        
+      </div>
+    </div>
+
+
+    
+  </div>
+    
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = x;
+  }
+
+  </script>
+
 
 
 {% endblock content %}

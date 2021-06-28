@@ -23,7 +23,7 @@ a=loop_times
 
 def index(request):
 
-    return render(request, "home/ContentUnitConvertion.html.html")
+    return render(request, "home/ContentUnitConvertion.html")
 
 def index1(request):
 

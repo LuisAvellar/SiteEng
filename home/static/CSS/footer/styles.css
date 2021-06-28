@@ -1,26 +1,40 @@
 .FooterBase {
-    height: var(--footerHeight);
-    background: var(--black);
-    border-top: none;
-    padding-left:   var(--footerpaddingleft);
-    padding-right: var(--footerpaddingright);
-    padding-top:  var(--footerpaddingtop);
-    padding-bottom:   var(--footerpaddingbottom);
-    color: var(--white);
-    text-align: center;
-    margin: 0px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    
-  }
 
-  @media (max-width: 800px) {
-    .FooterBase {
-      margin: 0px;
-    }
-  }
+  height: var(--footerHeight);
+  background: var(--black);
+  border-top: none;
+  padding-left:   var(--footerpaddingleft);
+  padding-right: var(--footerpaddingright);
+  padding-top:  var(--footerpaddingtop);
+  padding-bottom:   var(--footerpaddingbottom);
+  color: var(--white);
+  text-align: center;
+  margin: 0px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+    
+}
+
+
+.LogoBotton {
+ 
+  --LogoMargin: 7vh;
+  --logoHeight: calc( var(--menuHeight) - var(--LogoMargin) );
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: var(--logoHeight);
+  padding: 18px 10px 20px 10px;
+  border-radius: 15px;
+  color: var(--black);
+  background: var(--blue);
+  cursor: pointer;
+
+}
 
 .FotterBaseA{
   text-align: center;

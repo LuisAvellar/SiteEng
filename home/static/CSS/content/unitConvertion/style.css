@@ -1,0 +1,79 @@
+.content {
+    margin-top: var(--menuHeight);
+    margin-left: var(--leftMenuIconsSize);
+    min-height: calc( 100vh - var(--menuHeight) );
+    padding: var(--contentPaddingVertical) 0px;
+}
+
+.content > h1{
+    text-align: center;
+    font-size: 60px;
+    margin: 0px 0px 0px 0px;
+}
+
+.content > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: content-box;
+}
+
+.ConvBlockAll{
+    width: 380px;
+    margin: 30px;
+}
+
+.TitleUnits{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+}
+
+.ConvBlock {
+    width: 100%;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+
+.ConvBlock, .ConvertionInput {
+    display: flex;
+    text-align: center;
+}
+
+.ConvBlockleft, .ConvBlockright {
+    width: 50%; 
+    margin: 0px;
+}
+
+.ConvBlockleft {
+    border-right: 1px solid var(--black);
+}
+
+.ConvBlockright {
+
+}
+
+.ConvertionInput{
+    margin: 10px 0px;
+}
+
+.ConvertionInputElem{
+    width: 60%; 
+    margin: 0px 20px;
+}
+
+.choosing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 0px;
+    margin: 0px 0px; 
+    width: 100%;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.choosing > div {
+    margin: 10px 10px;    
+}
